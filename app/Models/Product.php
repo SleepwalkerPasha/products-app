@@ -14,4 +14,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function scopeByCode($query, string $code) : Product 
+    {
+        return $query->where('code', $code);
+    }
 }
