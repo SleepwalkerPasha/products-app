@@ -18,14 +18,13 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->sentence(10);
+        $name = fake()->sentence(3);
         return [
             'name' => $name,
             'code' => Str::slug($name, '-'),
             'activity' => fake()->boolean(),
-            'parentCategory' => fake()->sentence(10),
-            'price' => fake()->randomFloat(),
-            'createdAt' => now()
+            'parent_category' => fake()->sentence(5),
+            'created_at' => now()
         ];
     }
 }

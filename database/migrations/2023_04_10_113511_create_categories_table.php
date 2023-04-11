@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('code', 100);
             $table->boolean('activity');
-            $table->string('parentCategory');
-            $table->timestamps('createdAt');
+            $table->string('parent_category');
+            $table->dateTime('created_at');
         });
     }
 

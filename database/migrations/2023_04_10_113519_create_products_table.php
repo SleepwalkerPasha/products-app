@@ -16,15 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('code', 100);
             $table->longText('description');
-            $table->timestamps('createdAt');
+            $table->dateTime('created_at');
             $table->double('price');
-            $table->text('imgPath');
+            $table->text('img_path');
             $table->integer('count');
-            $table->foreignId('categoryId')
-                ->references('id')
-                ->on('categories')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+            $table->foreignId('category_id')->cascadeOnDelete();
         });
         
     }
