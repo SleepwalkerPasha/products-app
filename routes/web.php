@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/category/{code}', [CategoryController::class, 'getProductsByCategory'])->name('getProductsByCategory');
+
+Route::get('/products/{code}', [ProductController::class, 'getProductById'])->name('getProductById');
 
 Route::get('/', function () {
     return view('welcome');

@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+html>
 <head>
     <title>!DOCTYPE</title>
     <meta charset="utf-8">
@@ -11,7 +12,7 @@
         <ul>{{ $product->description }}</ul>
         <ul>{{ $product->created_at }}</ul> 
         <ul>{{ $product->price }}</ul> 
-        <ul>{{ $product->img_path }}</ul> 
+        <img src="$product->price" alt="image">
         <ul>{{ $product->count }}</ul> 
         <ul>{{ $product->category_id }}</ul> 
     </div>
